@@ -9,7 +9,16 @@
 <body>
     <div class="container">
         <h2 class="mt-4">Edição/Cancelamento de Solicitações</h2>
-        <form class="mt-4">
+        
+        <!-- Exibição do perfil do usuário -->
+        <div class="mt-4">
+            <h4>Perfil do Usuário</h4>
+            <p><strong>Nome:</strong> <span id="nomePerfil"></span></p>
+            <p><strong>Email:</strong> <span id="emailPerfil"></span></p>
+            <p><strong>Perfil:</strong> <span id="perfilUsuario"></span></p>
+        </div>
+        
+        <form id="solicitacaoForm" class="mt-4">
             <div class="mb-3">
                 <label for="tipoEspaco" class="form-label">Tipo de Espaço</label>
                 <select class="form-select" id="tipoEspaco">
@@ -21,14 +30,14 @@
             </div>
             <div class="mb-3">
                 <label for="dataSolicitacao" class="form-label">Data</label>
-                <input type="date" class="form-control" id="dataSolicitacao">
+                <input type="date" class="form-control" id="dataSolicitacao" required>
             </div>
             <div class="mb-3">
                 <label for="horarioSolicitacao" class="form-label">Horário</label>
-                <input type="time" class="form-control" id="horarioSolicitacao">
+                <input type="time" class="form-control" id="horarioSolicitacao" required>
             </div>
             <button type="submit" class="btn btn-primary">Editar Solicitação</button>
-            <button type="button" class="btn btn-danger">Cancelar Solicitação</button>
+            <button type="button" class="btn btn-danger" id="cancelarBtn">Cancelar Solicitação</button>
         </form>
     </div>
     <script src="js/editar-solicitacao.js"></script>

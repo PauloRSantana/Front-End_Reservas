@@ -1,15 +1,11 @@
-document.querySelectorAll('.aprovarSolicitacao').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var solicitacaoId = this.dataset.solicitacaoId;
-        // Lógica de aprovação (chamar API, banco de dados, etc.)
-        alert('Solicitação ' + solicitacaoId + ' aprovada.');
-    });
-});
+document.getElementById('solicitacaoForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário
 
-document.querySelectorAll('.rejeitarSolicitacao').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var solicitacaoId = this.dataset.solicitacaoId;
-        // Lógica de rejeição (chamar API, banco de dados, etc.)
-        alert('Solicitação ' + solicitacaoId + ' rejeitada.');
-    });
+    const tipoEspaco = document.getElementById('tipoEspaco').value;
+    const dataSolicitacao = document.getElementById('dataSolicitacao').value;
+    const horarioSolicitacao = document.getElementById('horarioSolicitacao').value;
+
+    // Exibir os dados da solicitação
+    const respostaDiv = document.getElementById('respostas');
+    respostaDiv.innerHTML += `<p>Solicitação para ${tipoEspaco} em ${dataSolicitacao} às ${horarioSolicitacao} enviada com sucesso!</p>`;
 });

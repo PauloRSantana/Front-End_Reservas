@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const auditTable = document.getElementById('auditTable');
+    const auditTable = document.getElementById('auditTable').getElementsByTagName('tbody')[0];
     
     // Exemplo de dados fictícios de auditoria
     const auditLog = [
@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
         row.insertCell(0).innerText = log.user;
         row.insertCell(1).innerText = log.action;
         row.insertCell(2).innerText = log.date;
-        row.insertCell(3).innerText = log.details;
+        row.insertCell(3).innerText = log.details; // Agora com a coluna Detalhes
     });
 });
