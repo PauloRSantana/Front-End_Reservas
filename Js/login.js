@@ -13,7 +13,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (email === 'admin@example.com' && password === '123456') {
         alert('Login realizado com sucesso!');
         // Redirecionar para a página de dashboard
-        window.location.href = 'pagina_de_perfis.html';
+        window.location.href = 'perfis.html';
     } else {
         alert('Email ou senha incorretos.');
     }
